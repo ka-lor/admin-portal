@@ -11,11 +11,11 @@ export const formConfig = [
   },
   {
     name: "Enabled",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
-    initialValue: "123",
+    initialValue: true,
   },
   {
     name: "ClientId",
@@ -23,7 +23,7 @@ export const formConfig = [
     table: "clients",
     colSize: 6,
     hide: false,
-    initialValue: "abc",
+    initialValue: "",
   },
   {
     name: "ProtocolType",
@@ -35,7 +35,7 @@ export const formConfig = [
   },
   {
     name: "RequireClientSecret",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -75,7 +75,7 @@ export const formConfig = [
   },
   {
     name: "RequireConsent",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -83,7 +83,7 @@ export const formConfig = [
   },
   {
     name: "AllowRememberConsent",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -91,7 +91,7 @@ export const formConfig = [
   },
   {
     name: "AlwaysIncludeUserClaimsInIdToken",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -99,7 +99,7 @@ export const formConfig = [
   },
   {
     name: "RequirePkce",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -107,7 +107,7 @@ export const formConfig = [
   },
   {
     name: "AllowPlainTextPkce",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -115,7 +115,7 @@ export const formConfig = [
   },
   {
     name: "RequireRequestObject",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -123,7 +123,7 @@ export const formConfig = [
   },
   {
     name: "AllowAccessTokensViaBrowser",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -139,7 +139,7 @@ export const formConfig = [
   },
   {
     name: "FrontChannelLogoutSessionRequired",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -155,7 +155,7 @@ export const formConfig = [
   },
   {
     name: "BackChannelLogoutSessionRequired",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -163,7 +163,7 @@ export const formConfig = [
   },
   {
     name: "AllowOfflineAccess",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -171,7 +171,7 @@ export const formConfig = [
   },
   {
     name: "IdentityTokenLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -187,7 +187,7 @@ export const formConfig = [
   },
   {
     name: "AccessTokenLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -195,7 +195,7 @@ export const formConfig = [
   },
   {
     name: "AuthorizationCodeLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -203,7 +203,7 @@ export const formConfig = [
   },
   {
     name: "ConsentLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -211,7 +211,7 @@ export const formConfig = [
   },
   {
     name: "AbsoluteRefreshTokenLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -219,7 +219,7 @@ export const formConfig = [
   },
   {
     name: "SlidingRefreshTokenLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -227,7 +227,7 @@ export const formConfig = [
   },
   {
     name: "RefreshTokenUsage",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -235,7 +235,7 @@ export const formConfig = [
   },
   {
     name: "UpdateAccessTokenClaimsOnRefresh",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -259,7 +259,7 @@ export const formConfig = [
   },
   {
     name: "EnableLocalLogin",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -267,7 +267,7 @@ export const formConfig = [
   },
   {
     name: "IncludeJwtId",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -275,7 +275,7 @@ export const formConfig = [
   },
   {
     name: "AlwaysSendClientClaims",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -323,7 +323,7 @@ export const formConfig = [
   },
   {
     name: "UserSsoLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -339,7 +339,7 @@ export const formConfig = [
   },
   {
     name: "DeviceCodeLifetime",
-    type: "text",
+    type: "tokenLifetime",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -347,7 +347,7 @@ export const formConfig = [
   },
   {
     name: "NonEditable",
-    type: "bool",
+    type: "boolean",
     table: "clients",
     colSize: 6,
     hide: false,
@@ -357,38 +357,40 @@ export const formConfig = [
 
 export const yupSchema = yup.object({
   Id: yup.number().required("Id is required."),
-  Enabled: yup.bool().required("Enabled is required."),
+  Enabled: yup.boolean().required("Enabled is required."),
   ClientId: yup.string().required("ClientId is required."),
   ProtocolType: yup.string().required("ProtocolType is required."),
-  RequireClientSecret: yup.bool().required("RequireClientSecret is required."),
+  RequireClientSecret: yup
+    .boolean()
+    .required("RequireClientSecret is required."),
   ClientName: yup.string(),
   Description: yup.string(),
   ClientUri: yup.string(),
   LogoUri: yup.string(),
-  RequireConsent: yup.bool().required("RequireConsent is required."),
+  RequireConsent: yup.boolean().required("RequireConsent is required."),
   AllowRememberConsent: yup
-    .bool()
+    .boolean()
     .required("AllowRememberConsent is required."),
   AlwaysIncludeUserClaimsInIdToken: yup
-    .bool()
+    .boolean()
     .required("AlwaysIncludeUserClaimsInIdToken is required."),
-  RequirePkce: yup.bool().required("RequirePkce is required."),
-  AllowPlainTextPkce: yup.bool().required("AllowPlainTextPkce is required."),
+  RequirePkce: yup.boolean().required("RequirePkce is required."),
+  AllowPlainTextPkce: yup.boolean().required("AllowPlainTextPkce is required."),
   RequireRequestObject: yup
-    .bool()
+    .boolean()
     .required("RequireRequestObject is required."),
   AllowAccessTokensViaBrowser: yup
-    .bool()
+    .boolean()
     .required("AllowAccessTokensViaBrowser is required."),
   FrontChannelLogoutUri: yup.string(),
   FrontChannelLogoutSessionRequired: yup
-    .bool()
+    .boolean()
     .required("FrontChannelLogoutSessionRequired is required."),
   BackChannelLogoutUri: yup.string(),
   BackChannelLogoutSessionRequired: yup
-    .bool()
+    .boolean()
     .required("BackChannelLogoutSessionRequired is required."),
-  AllowOfflineAccess: yup.bool().required("AllowOfflineAccess is required."),
+  AllowOfflineAccess: yup.boolean().required("AllowOfflineAccess is required."),
   IdentityTokenLifetime: yup
     .number()
     .required("IdentityTokenLifetime is required."),
@@ -408,16 +410,16 @@ export const yupSchema = yup.object({
     .required("SlidingRefreshTokenLifetime is required."),
   RefreshTokenUsage: yup.number().required("RefreshTokenUsage is required."),
   UpdateAccessTokenClaimsOnRefresh: yup
-    .bool()
+    .boolean()
     .required("UpdateAccessTokenClaimsOnRefresh is required."),
   RefreshTokenExpiration: yup
     .number()
     .required("RefreshTokenExpiration is required."),
   AccessTokenType: yup.number().required("AccessTokenType is required."),
-  EnableLocalLogin: yup.bool().required("EnableLocalLogin is required."),
-  IncludeJwtId: yup.bool().required("IncludeJwtId is required."),
+  EnableLocalLogin: yup.boolean().required("EnableLocalLogin is required."),
+  IncludeJwtId: yup.boolean().required("IncludeJwtId is required."),
   AlwaysSendClientClaims: yup
-    .bool()
+    .boolean()
     .required("AlwaysSendClientClaims is required."),
   ClientClaimsPrefix: yup.string(),
   PairWiseSubjectSalt: yup.string(),
@@ -427,7 +429,7 @@ export const yupSchema = yup.object({
   UserSsoLifetime: yup.number(),
   UserCodeType: yup.string(),
   DeviceCodeLifetime: yup.number().required("DeviceCodeLifetime is required."),
-  NonEditable: yup.bool().required("NonEditable is required."),
+  NonEditable: yup.boolean().required("NonEditable is required."),
 });
 
 export const initialValues = getInitialValues(formConfig);

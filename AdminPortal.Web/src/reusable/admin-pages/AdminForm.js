@@ -12,6 +12,7 @@ import {
   CFormText,
 } from "@coreui/react";
 import { useFormik } from "formik";
+import { InputFields } from "../";
 
 function AdminForm(props) {
   const formik = useFormik({
@@ -47,46 +48,25 @@ function AdminForm(props) {
                 {props.formConfig
                   .filter((c) => !c.hide)
                   .map((input, i) => (
-                    <CFormGroup key={i}>
-                      <CLabel>{input.name}</CLabel>
-                      <CInput
-                        as="input"
-                        invalid={formik.errors[input.name] ? true : false}
-                        value={formik.values[input.name]}
-                        onChange={formik.handleChange}
-                        type="text"
-                        id={input.name}
-                      />
-                      {formik.errors[input.name] && (
-                        <CFormText className="help-block" color="danger">
-                          {formik.errors[input.name]}
-                        </CFormText>
-                      )}
-                    </CFormGroup>
+                    <InputFields
+                      key={`${input.table}-${input.name}`}
+                      formik={formik}
+                      input={input}
+                    />
                   ))}
               </>
             ) : (
-              <>
-                {props.formConfig.map((input, i) => (
-                  <CFormGroup key={i}>
-                    <CLabel>{input.name}</CLabel>
-                    <CInput
-                      as="input"
-                      disabled={input.hide}
-                      value={formik.values[input.name]}
-                      invalid={formik.errors[input.name] ? true : false}
-                      onChange={formik.handleChange}
-                      type="text"
-                      id={input.name}
+              props.display === "edit" && (
+                <>
+                  {props.formConfig.map((input, i) => (
+                    <InputFields
+                      key={`${input.table}-${input.name}`}
+                      formik={formik}
+                      input={input}
                     />
-                    {formik.errors[input.name] && (
-                      <CFormText className="help-block" color="danger">
-                        {formik.errors[input.name]}
-                      </CFormText>
-                    )}
-                  </CFormGroup>
-                ))}
-              </>
+                  ))}
+                </>
+              )
             )}
           </CModalBody>
           <CModalFooter>
