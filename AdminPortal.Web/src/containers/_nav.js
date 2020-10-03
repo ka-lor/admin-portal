@@ -14,12 +14,12 @@ export default [
   },
   {
     _tag: "CSidebarNavTitle",
-    _children: ["Theme"],
+    _children: ["Identity Server"],
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Colors",
-    to: "/theme/colors",
+    name: "Clients",
+    to: "/identity-server/clients",
     icon: "cil-drop",
   },
   {

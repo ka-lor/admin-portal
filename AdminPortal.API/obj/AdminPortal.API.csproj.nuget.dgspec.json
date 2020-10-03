@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/kalor/Documents/Repos/AdminPortal/AdminPortal.API/AdminPortal.API.csproj": {}
+    "/Users/kalor/Documents/Repos/admin-portal/AdminPortal.API/AdminPortal.API.csproj": {}
   },
   "projects": {
-    "/Users/kalor/Documents/Repos/AdminPortal/AdminPortal.API/AdminPortal.API.csproj": {
+    "/Users/kalor/Documents/Repos/admin-portal/AdminPortal.API/AdminPortal.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kalor/Documents/Repos/AdminPortal/AdminPortal.API/AdminPortal.API.csproj",
+        "projectUniqueName": "/Users/kalor/Documents/Repos/admin-portal/AdminPortal.API/AdminPortal.API.csproj",
         "projectName": "AdminPortal.API",
-        "projectPath": "/Users/kalor/Documents/Repos/AdminPortal/AdminPortal.API/AdminPortal.API.csproj",
+        "projectPath": "/Users/kalor/Documents/Repos/admin-portal/AdminPortal.API/AdminPortal.API.csproj",
         "packagesPath": "/Users/kalor/.nuget/packages/",
-        "outputPath": "/Users/kalor/Documents/Repos/AdminPortal/AdminPortal.API/obj/",
+        "outputPath": "/Users/kalor/Documents/Repos/admin-portal/AdminPortal.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/kalor/.nuget/NuGet/NuGet.Config"
@@ -54,7 +54,13 @@
             },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
-              "version": "[*, )"
+              "version": "[2.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.8, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -73,6 +79,14 @@
             "Serilog.AspNetCore": {
               "target": "Package",
               "version": "[3.2.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.6.3, )"
+            },
+            "Swashbuckle.AspNetCore.Filters": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             }
           },
           "imports": [
