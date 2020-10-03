@@ -11,17 +11,12 @@ import {
   CLabel,
   CFormText,
 } from "@coreui/react";
-import {
-  formConfig,
-  yupSchema,
-  initialValues,
-} from "../../configs/tables/Clients";
 import { useFormik } from "formik";
 
-function ClientForm(props) {
+function AdminForm(props) {
   const formik = useFormik({
-    initialValues: initialValues,
-    validationSchema: yupSchema,
+    initialValues: props.initialValues,
+    validationSchema: props.yupSchema,
     validateOnChange: false,
     setFieldValue: (e) => {
       console.log(e);
@@ -46,11 +41,10 @@ function ClientForm(props) {
       >
         <CForm onSubmit={formik.handleSubmit}>
           <CModalHeader closeButton>Modal title</CModalHeader>
-
           <CModalBody>
             {props.display === "add" ? (
               <>
-                {formConfig
+                {props.formConfig
                   .filter((c) => !c.hide)
                   .map((input, i) => (
                     <CFormGroup key={i}>
@@ -73,7 +67,7 @@ function ClientForm(props) {
               </>
             ) : (
               <>
-                {formConfig.map((input, i) => (
+                {props.formConfig.map((input, i) => (
                   <CFormGroup key={i}>
                     <CLabel>{input.name}</CLabel>
                     <CInput
@@ -114,4 +108,4 @@ function ClientForm(props) {
   );
 }
 
-export default ClientForm;
+export default AdminForm;

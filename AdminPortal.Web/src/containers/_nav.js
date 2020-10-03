@@ -24,8 +24,14 @@ export default [
   },
   {
     _tag: "CSidebarNavItem",
-    name: "Typography",
-    to: "/theme/typography",
+    name: "Client Secrets",
+    to: "/identity-server/client-secrets",
+    icon: "cil-pencil",
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Client Scopes",
+    to: "/identity-server/client-scopes",
     icon: "cil-pencil",
   },
 ];
