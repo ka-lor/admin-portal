@@ -1,5 +1,7 @@
+using System.Linq;
 using System.Threading.Tasks;
 using AdminPortal.API.Data.IdentityServer;
+using AdminPortal.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,11 +17,13 @@ namespace AdminPortal.API.Controllers
         }
 
         [HttpGet("api/v1/admin-portal/controllers/client-scopes")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(ClientModel query)
         {
-            var clients = await _ctx.ClientScopes.ToListAsync();
+            var data = await _ctx.ClientScopes.ToListAsync();
 
-            return Ok(clients);
+            var clients = data.Skip((query.Page * query.PageSize)).Take(query.PageSize).ToList();
+
+            return Ok(new { count = data.Count(), results = clients });
         }
     }
 }

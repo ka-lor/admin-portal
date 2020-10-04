@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace AdminPortal.API.Controllers
 {
+    [Route("api/v1/admin-portal/controllers")]
     public class ClientsController : Controller
     {
         private readonly IdentityServerContext _ctx;
@@ -15,7 +16,7 @@ namespace AdminPortal.API.Controllers
             _ctx = ctx;
         }
 
-        [HttpGet("api/v1/admin-portal/controllers/clients")]
+        [HttpGet("clients")]
         public async Task<IActionResult> Get()
         {
             var clients = await _ctx.Clients.ToListAsync();
@@ -23,7 +24,7 @@ namespace AdminPortal.API.Controllers
             return Ok(clients);
         }
 
-        [HttpGet("api/v1/admin-portal/controllers/clients/{id}")]
+        [HttpGet("clients/{id}")]
         public async Task<IActionResult> GetById(int Id)
         {
             var clients = await _ctx.Clients.ToListAsync();
@@ -31,7 +32,7 @@ namespace AdminPortal.API.Controllers
             return Ok(clients);
         }
 
-        [HttpPost("api/v1/admin-portal/controllers/clients")]
+        [HttpPost("clients")]
         public async Task<IActionResult> Create(ClientModel client)
         {
             var clients = await _ctx.Clients.ToListAsync();
@@ -39,7 +40,7 @@ namespace AdminPortal.API.Controllers
             return Ok(clients);
         }
 
-        [HttpPut("api/v1/admin-portal/controllers/clients")]
+        [HttpPut("clients")]
         public async Task<IActionResult> Update(ClientModel client)
         {
             var clients = await _ctx.Clients.ToListAsync();
@@ -47,7 +48,7 @@ namespace AdminPortal.API.Controllers
             return Ok(clients);
         }
 
-        [HttpDelete("api/v1/admin-portal/controllers/clients/{id}")]
+        [HttpDelete("clients/{id}")]
         public async Task<IActionResult> Delete(int Id)
         {
             var clients = await _ctx.Clients.ToListAsync();

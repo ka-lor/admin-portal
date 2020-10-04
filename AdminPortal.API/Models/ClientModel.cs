@@ -48,5 +48,7 @@ namespace AdminPortal.API.Models
         public string UserCodeType { get; set; }
         public int DeviceCodeLifetime { get; set; }
         public bool NonEditable { get; set; }
+        public int PageSize { get; set; } = 10;
+        public int Page { get; set; } = 0;
     }
 }

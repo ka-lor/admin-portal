@@ -1,11 +1,11 @@
-declare @TableName sysname = 'clients'
+declare @TableName sysname = 'Clients'
 
 declare @FormConfig varchar(max) = 'import * as yup from "yup";
 
 export const formConfig = ['
 
 select @FormConfig = @FormConfig + '
-    { name: "' + ColumnName + '", type: "' + ColumnType + '", table: "' + @TableName +'", colSize: 6, hide: false, initialValue: ""  },'
+    { Header: "' + ColumnName +  '", accessor: "' + ColumnName + '", type: "' + ColumnType + '", table: "' + @TableName +'", colSize: 6, hidden: false, initialValue: ""  },'
 from
     (
     select
@@ -69,7 +69,7 @@ from
         replace(col.name, ' ', '_') ColumnName,
         column_id ColumnId,
         case
-			when col.is_nullable = 0 then '.required("' + col.name +' is required.")' else '' end IsRequired,
+			when col.is_nullable = 0 then '.required("' + col.name +' is required.")' else '.nullable()' end IsRequired,
         case typ.name 
             when 'bigint' then 'long'
             when 'binary' then 'byte[]'

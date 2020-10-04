@@ -5,25 +5,25 @@ export const formConfig = [
     Header: "Id",
     accessor: "Id",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
-    hidden: true,
+    hidden: false,
     initialValue: "",
   },
   {
     Header: "Enabled",
     accessor: "Enabled",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
-    initialValue: true,
+    initialValue: "",
   },
   {
     Header: "ClientId",
     accessor: "ClientId",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -32,7 +32,7 @@ export const formConfig = [
     Header: "ProtocolType",
     accessor: "ProtocolType",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -40,18 +40,17 @@ export const formConfig = [
   {
     Header: "RequireClientSecret",
     accessor: "RequireClientSecret",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
   },
   {
-    name: "ClientName",
-    Header: "ClientHeader",
-    accessor: "Clientaccessor",
+    Header: "ClientName",
+    accessor: "ClientName",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -60,7 +59,7 @@ export const formConfig = [
     Header: "Description",
     accessor: "Description",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -69,7 +68,7 @@ export const formConfig = [
     Header: "ClientUri",
     accessor: "ClientUri",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -78,7 +77,7 @@ export const formConfig = [
     Header: "LogoUri",
     accessor: "LogoUri",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -86,8 +85,8 @@ export const formConfig = [
   {
     Header: "RequireConsent",
     accessor: "RequireConsent",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -95,8 +94,8 @@ export const formConfig = [
   {
     Header: "AllowRememberConsent",
     accessor: "AllowRememberConsent",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -104,8 +103,8 @@ export const formConfig = [
   {
     Header: "AlwaysIncludeUserClaimsInIdToken",
     accessor: "AlwaysIncludeUserClaimsInIdToken",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -113,8 +112,8 @@ export const formConfig = [
   {
     Header: "RequirePkce",
     accessor: "RequirePkce",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -122,8 +121,8 @@ export const formConfig = [
   {
     Header: "AllowPlainTextPkce",
     accessor: "AllowPlainTextPkce",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -131,8 +130,8 @@ export const formConfig = [
   {
     Header: "RequireRequestObject",
     accessor: "RequireRequestObject",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -140,8 +139,8 @@ export const formConfig = [
   {
     Header: "AllowAccessTokensViaBrowser",
     accessor: "AllowAccessTokensViaBrowser",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -150,7 +149,7 @@ export const formConfig = [
     Header: "FrontChannelLogoutUri",
     accessor: "FrontChannelLogoutUri",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -158,8 +157,8 @@ export const formConfig = [
   {
     Header: "FrontChannelLogoutSessionRequired",
     accessor: "FrontChannelLogoutSessionRequired",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -168,7 +167,7 @@ export const formConfig = [
     Header: "BackChannelLogoutUri",
     accessor: "BackChannelLogoutUri",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -176,8 +175,8 @@ export const formConfig = [
   {
     Header: "BackChannelLogoutSessionRequired",
     accessor: "BackChannelLogoutSessionRequired",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -185,8 +184,8 @@ export const formConfig = [
   {
     Header: "AllowOfflineAccess",
     accessor: "AllowOfflineAccess",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -194,8 +193,8 @@ export const formConfig = [
   {
     Header: "IdentityTokenLifetime",
     accessor: "IdentityTokenLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -204,7 +203,7 @@ export const formConfig = [
     Header: "AllowedIdentityTokenSigningAlgorithms",
     accessor: "AllowedIdentityTokenSigningAlgorithms",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -212,8 +211,8 @@ export const formConfig = [
   {
     Header: "AccessTokenLifetime",
     accessor: "AccessTokenLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -221,8 +220,8 @@ export const formConfig = [
   {
     Header: "AuthorizationCodeLifetime",
     accessor: "AuthorizationCodeLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -230,8 +229,8 @@ export const formConfig = [
   {
     Header: "ConsentLifetime",
     accessor: "ConsentLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -239,8 +238,8 @@ export const formConfig = [
   {
     Header: "AbsoluteRefreshTokenLifetime",
     accessor: "AbsoluteRefreshTokenLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -248,8 +247,8 @@ export const formConfig = [
   {
     Header: "SlidingRefreshTokenLifetime",
     accessor: "SlidingRefreshTokenLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -257,8 +256,8 @@ export const formConfig = [
   {
     Header: "RefreshTokenUsage",
     accessor: "RefreshTokenUsage",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -266,8 +265,8 @@ export const formConfig = [
   {
     Header: "UpdateAccessTokenClaimsOnRefresh",
     accessor: "UpdateAccessTokenClaimsOnRefresh",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -276,7 +275,7 @@ export const formConfig = [
     Header: "RefreshTokenExpiration",
     accessor: "RefreshTokenExpiration",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -285,7 +284,7 @@ export const formConfig = [
     Header: "AccessTokenType",
     accessor: "AccessTokenType",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -293,8 +292,8 @@ export const formConfig = [
   {
     Header: "EnableLocalLogin",
     accessor: "EnableLocalLogin",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -302,8 +301,8 @@ export const formConfig = [
   {
     Header: "IncludeJwtId",
     accessor: "IncludeJwtId",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -311,8 +310,8 @@ export const formConfig = [
   {
     Header: "AlwaysSendClientClaims",
     accessor: "AlwaysSendClientClaims",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -321,7 +320,7 @@ export const formConfig = [
     Header: "ClientClaimsPrefix",
     accessor: "ClientClaimsPrefix",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -330,7 +329,7 @@ export const formConfig = [
     Header: "PairWiseSubjectSalt",
     accessor: "PairWiseSubjectSalt",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -339,7 +338,7 @@ export const formConfig = [
     Header: "Created",
     accessor: "Created",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -348,7 +347,7 @@ export const formConfig = [
     Header: "Updated",
     accessor: "Updated",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -357,7 +356,7 @@ export const formConfig = [
     Header: "LastAccessed",
     accessor: "LastAccessed",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -365,8 +364,8 @@ export const formConfig = [
   {
     Header: "UserSsoLifetime",
     accessor: "UserSsoLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -375,7 +374,7 @@ export const formConfig = [
     Header: "UserCodeType",
     accessor: "UserCodeType",
     type: "text",
-    table: "clients",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -383,8 +382,8 @@ export const formConfig = [
   {
     Header: "DeviceCodeLifetime",
     accessor: "DeviceCodeLifetime",
-    type: "tokenLifetime",
-    table: "clients",
+    type: "text",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -392,8 +391,8 @@ export const formConfig = [
   {
     Header: "NonEditable",
     accessor: "NonEditable",
-    type: "boolean",
-    table: "clients",
+    type: "bool",
+    table: "Clients",
     colSize: 6,
     hidden: false,
     initialValue: "",
@@ -402,52 +401,49 @@ export const formConfig = [
 
 export const yupSchema = yup.object({
   Id: yup.number().required("Id is required."),
-  Enabled: yup.boolean().required("Enabled is required."),
+  Enabled: yup.bool().required("Enabled is required."),
   ClientId: yup.string().required("ClientId is required."),
   ProtocolType: yup.string().required("ProtocolType is required."),
-  RequireClientSecret: yup
-    .boolean()
-    .required("RequireClientSecret is required."),
-  ClientHeader: yup.string(),
-  Clientaccessor: yup.string(),
-  Description: yup.string(),
-  ClientUri: yup.string(),
-  LogoUri: yup.string(),
-  RequireConsent: yup.boolean().required("RequireConsent is required."),
+  RequireClientSecret: yup.bool().required("RequireClientSecret is required."),
+  ClientName: yup.string().nullable(),
+  Description: yup.string().nullable(),
+  ClientUri: yup.string().nullable(),
+  LogoUri: yup.string().nullable(),
+  RequireConsent: yup.bool().required("RequireConsent is required."),
   AllowRememberConsent: yup
-    .boolean()
+    .bool()
     .required("AllowRememberConsent is required."),
   AlwaysIncludeUserClaimsInIdToken: yup
-    .boolean()
+    .bool()
     .required("AlwaysIncludeUserClaimsInIdToken is required."),
-  RequirePkce: yup.boolean().required("RequirePkce is required."),
-  AllowPlainTextPkce: yup.boolean().required("AllowPlainTextPkce is required."),
+  RequirePkce: yup.bool().required("RequirePkce is required."),
+  AllowPlainTextPkce: yup.bool().required("AllowPlainTextPkce is required."),
   RequireRequestObject: yup
-    .boolean()
+    .bool()
     .required("RequireRequestObject is required."),
   AllowAccessTokensViaBrowser: yup
-    .boolean()
+    .bool()
     .required("AllowAccessTokensViaBrowser is required."),
-  FrontChannelLogoutUri: yup.string(),
+  FrontChannelLogoutUri: yup.string().nullable(),
   FrontChannelLogoutSessionRequired: yup
-    .boolean()
+    .bool()
     .required("FrontChannelLogoutSessionRequired is required."),
-  BackChannelLogoutUri: yup.string(),
+  BackChannelLogoutUri: yup.string().nullable(),
   BackChannelLogoutSessionRequired: yup
-    .boolean()
+    .bool()
     .required("BackChannelLogoutSessionRequired is required."),
-  AllowOfflineAccess: yup.boolean().required("AllowOfflineAccess is required."),
+  AllowOfflineAccess: yup.bool().required("AllowOfflineAccess is required."),
   IdentityTokenLifetime: yup
     .number()
     .required("IdentityTokenLifetime is required."),
-  AllowedIdentityTokenSigningAlgorithms: yup.string(),
+  AllowedIdentityTokenSigningAlgorithms: yup.string().nullable(),
   AccessTokenLifetime: yup
     .number()
     .required("AccessTokenLifetime is required."),
   AuthorizationCodeLifetime: yup
     .number()
     .required("AuthorizationCodeLifetime is required."),
-  ConsentLifetime: yup.number(),
+  ConsentLifetime: yup.number().nullable(),
   AbsoluteRefreshTokenLifetime: yup
     .number()
     .required("AbsoluteRefreshTokenLifetime is required."),
@@ -456,26 +452,26 @@ export const yupSchema = yup.object({
     .required("SlidingRefreshTokenLifetime is required."),
   RefreshTokenUsage: yup.number().required("RefreshTokenUsage is required."),
   UpdateAccessTokenClaimsOnRefresh: yup
-    .boolean()
+    .bool()
     .required("UpdateAccessTokenClaimsOnRefresh is required."),
   RefreshTokenExpiration: yup
     .number()
     .required("RefreshTokenExpiration is required."),
   AccessTokenType: yup.number().required("AccessTokenType is required."),
-  EnableLocalLogin: yup.boolean().required("EnableLocalLogin is required."),
-  IncludeJwtId: yup.boolean().required("IncludeJwtId is required."),
+  EnableLocalLogin: yup.bool().required("EnableLocalLogin is required."),
+  IncludeJwtId: yup.bool().required("IncludeJwtId is required."),
   AlwaysSendClientClaims: yup
-    .boolean()
+    .bool()
     .required("AlwaysSendClientClaims is required."),
-  ClientClaimsPrefix: yup.string(),
-  PairWiseSubjectSalt: yup.string(),
+  ClientClaimsPrefix: yup.string().nullable(),
+  PairWiseSubjectSalt: yup.string().nullable(),
   Created: yup.string().required("Created is required."),
-  Updated: yup.string(),
-  LastAccessed: yup.string(),
-  UserSsoLifetime: yup.number(),
-  UserCodeType: yup.string(),
+  Updated: yup.string().nullable(),
+  LastAccessed: yup.string().nullable(),
+  UserSsoLifetime: yup.number().nullable(),
+  UserCodeType: yup.string().nullable(),
   DeviceCodeLifetime: yup.number().required("DeviceCodeLifetime is required."),
-  NonEditable: yup.boolean().required("NonEditable is required."),
+  NonEditable: yup.bool().required("NonEditable is required."),
 });
 
 export const initialValues = getInitialValues(formConfig);
@@ -483,8 +479,7 @@ export const initialValues = getInitialValues(formConfig);
 function getInitialValues(formConfig) {
   let obj = {};
   formConfig.map((c) => {
-    obj[c.Header] = c.initialValue;
-    obj[c.accessor] = c.initialValue;
+    obj[c.name] = c.initialValue;
   });
 
   return obj;
