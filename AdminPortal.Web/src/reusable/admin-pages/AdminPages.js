@@ -32,7 +32,7 @@ const style = {
     backgroundColor: "transparent",
     color: "#4f5d73",
     width: "100%",
-    padding: ".5rem 1.25rem",
+    padding: ".1rem 1rem",
     "&:hover": {
       backgroundColor: "red",
     },

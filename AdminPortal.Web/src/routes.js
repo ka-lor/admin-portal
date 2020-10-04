@@ -2,6 +2,9 @@ import React from "react";
 
 const Dashboard = React.lazy(() => import("./views/dashboard/Dashboard"));
 const Clients = React.lazy(() => import("./views/clients/Clients"));
+const Swagger = React.lazy(() =>
+  import("./views/identity-server/swagger/Swagger")
+);
 const ClientScopes = React.lazy(() =>
   import("./views/client-scopes/ClientScopes")
 );
@@ -22,6 +25,7 @@ const routes = [
     component: ClientScopes,
   },
   { path: "/identity-server/clients", name: "Clients", component: Clients },
+  { path: "/swagger/identity-server", name: "Swagger", component: Swagger },
   { path: "/", exact: true, name: "Home" },
 ];
 
