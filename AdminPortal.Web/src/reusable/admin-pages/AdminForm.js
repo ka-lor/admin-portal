@@ -46,10 +46,10 @@ function AdminForm(props) {
             {props.display === "add" ? (
               <>
                 {props.formConfig
-                  .filter((c) => !c.hide)
+                  .filter((c) => !c.hidden)
                   .map((input, i) => (
                     <InputFields
-                      key={`${input.table}-${input.name}`}
+                      key={`${input.table}-${input.Accessor}`}
                       formik={formik}
                       input={input}
                     />
@@ -60,7 +60,7 @@ function AdminForm(props) {
                 <>
                   {props.formConfig.map((input, i) => (
                     <InputFields
-                      key={`${input.table}-${input.name}`}
+                      key={`${input.table}-${input.Accessor}`}
                       formik={formik}
                       input={input}
                     />

@@ -34,20 +34,20 @@ function InputFields(props) {
     case "text":
       return (
         <CFormGroup>
-          <CLabel htmlFor={props.input.name}>{props.input.name}</CLabel>
+          <CLabel htmlFor={props.input.accessor}>{props.input.accessor}</CLabel>
           <CInput
             type="text"
-            disabled={props.input.hide}
-            id={props.input.name}
-            name={props.input.name}
-            value={props.formik.values[props.input.name]}
+            disabled={props.input.hidden}
+            id={props.input.accessor}
+            name={props.input.accessor}
+            value={props.formik.values[props.input.accessor]}
             placeholder=""
             onChange={props.formik.handleChange}
-            autoComplete={props.input.name}
+            autoComplete={props.input.accessor}
           />
-          {props.formik.errors[props.input.name] && (
+          {props.formik.errors[props.input.accessor] && (
             <CFormText color="danger" className="help-block">
-              {props.formik.errors[props.input.name]}
+              {props.formik.errors[props.input.accessor]}
             </CFormText>
           )}
         </CFormGroup>
@@ -55,13 +55,13 @@ function InputFields(props) {
     case "boolean":
       return (
         <CFormGroup>
-          <CLabel htmlFor={props.input.name}>{props.input.name}</CLabel>
+          <CLabel htmlFor={props.input.accessor}>{props.input.accessor}</CLabel>
           <CSelect
             custom
-            id={props.input.name}
-            name={props.input.name}
-            value={props.formik.values[props.input.name]}
-            disabled={props.input.hide}
+            id={props.input.accessor}
+            name={props.input.accessor}
+            value={props.formik.values[props.input.accessor]}
+            disabled={props.input.hidden}
             onChange={props.formik.handleChange}
             autoComplete="name"
           >
@@ -69,9 +69,9 @@ function InputFields(props) {
             <option value={true}>Yes</option>
             <option value={false}>No</option>
           </CSelect>
-          {props.formik.errors[props.input.name] && (
+          {props.formik.errors[props.input.accessor] && (
             <CFormText color="danger" className="help-block">
-              {props.formik.errors[props.input.name]}
+              {props.formik.errors[props.input.accessor]}
             </CFormText>
           )}
         </CFormGroup>
@@ -79,13 +79,13 @@ function InputFields(props) {
     case "tokenLifetime":
       return (
         <CFormGroup>
-          <CLabel htmlFor={props.input.name}>{props.input.name}</CLabel>
+          <CLabel htmlFor={props.input.accessor}>{props.input.accessor}</CLabel>
           <CSelect
             custom
-            id={props.input.name}
-            name={props.input.name}
-            value={props.formik.values[props.input.name]}
-            disabled={props.input.hide}
+            id={props.input.accessor}
+            name={props.input.accessor}
+            value={props.formik.values[props.input.accessor]}
+            disabled={props.input.hidden}
             onChange={props.formik.handleChange}
             autoComplete="name"
           >
@@ -96,9 +96,9 @@ function InputFields(props) {
             <option value={1296000}>1296000</option>
             <option value={2592000}>2592000</option>
           </CSelect>
-          {props.formik.errors[props.input.name] && (
+          {props.formik.errors[props.input.accessor] && (
             <CFormText color="danger" className="help-block">
-              {props.formik.errors[props.input.name]}
+              {props.formik.errors[props.input.accessor]}
             </CFormText>
           )}
         </CFormGroup>
@@ -106,20 +106,20 @@ function InputFields(props) {
     default:
       return (
         <CFormGroup>
-          <CLabel htmlFor={props.input.name}>Email</CLabel>
+          <CLabel htmlFor={props.input.accessor}>Email</CLabel>
           <CInput
-            disabled={props.input.hide}
-            type={props.input.name}
-            id={props.input.name}
-            value={props.formik.values[props.input.name]}
-            name={props.input.name}
+            disabled={props.input.hidden}
+            type={props.input.accessor}
+            id={props.input.accessor}
+            value={props.formik.values[props.input.accessor]}
+            name={props.input.accessor}
             placeholder=""
             onChange={props.formik.handleChange}
-            autoComplete={props.input.name}
+            autoComplete={props.input.accessor}
           />
-          {props.formik.errors[props.input.name] && (
+          {props.formik.errors[props.input.accessor] && (
             <CFormText color="danger" className="help-block">
-              {props.formik.errors[props.input.name]}
+              {props.formik.errors[props.input.accessor]}
             </CFormText>
           )}
         </CFormGroup>

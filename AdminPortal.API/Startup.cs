@@ -63,13 +63,13 @@ namespace AdminPortal.API
             services.AddCors(options =>
             {
                 options.AddPolicy(name: MyAllowSpecificOrigins,
-                                    builder =>
-                                    {
-                                        builder
-                                            .AllowAnyHeader()
-                                            .AllowAnyMethod()
-                                            .AllowAnyOrigin();
-                                    });
+                builder =>
+                {
+                    builder
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin();
+                });
             });
 
 

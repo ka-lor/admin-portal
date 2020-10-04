@@ -2,27 +2,30 @@ import * as yup from "yup";
 
 export const formConfig = [
   {
-    name: "Id",
+    Header: "Id",
+    accessor: "Id",
     type: "text",
     table: "ClientScopes",
     colSize: 6,
-    hide: false,
+    hidden: false,
     initialValue: "",
   },
   {
-    name: "Scope",
+    Header: "Scope",
+    accessor: "Scope",
     type: "text",
     table: "ClientScopes",
     colSize: 6,
-    hide: false,
+    hidden: false,
     initialValue: "",
   },
   {
-    name: "ClientId",
+    Header: "ClientId",
+    accessor: "ClientId",
     type: "text",
     table: "ClientScopes",
     colSize: 6,
-    hide: false,
+    hidden: false,
     initialValue: "",
   },
 ];
@@ -39,6 +42,7 @@ function getInitialValues(formConfig) {
   let obj = {};
   formConfig.map((c) => {
     obj[c.name] = c.initialValue;
+    obj[c.accessor] = c.initialValue;
   });
 
   return obj;
