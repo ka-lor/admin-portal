@@ -19,11 +19,11 @@ namespace AdminPortal.API.Controllers
         [HttpGet("api/v1/admin-portal/controllers/client-scopes")]
         public async Task<IActionResult> Get(ClientModel query)
         {
-            var data = await _ctx.ClientScopes.ToListAsync();
+            var data = _ctx.ClientScopes.Select(o => o);
+            var count = data.Count();
+            var results = await data.Skip((query.Page * query.PageSize)).Take(query.PageSize).ToListAsync();
 
-            var clients = data.Skip((query.Page * query.PageSize)).Take(query.PageSize).ToList();
-
-            return Ok(new { count = data.Count(), results = clients });
+            return Ok(new { count, results });
         }
     }
 }

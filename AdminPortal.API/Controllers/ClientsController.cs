@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using AdminPortal.API.Data.IdentityServer;
 using AdminPortal.API.Models;
@@ -17,11 +18,13 @@ namespace AdminPortal.API.Controllers
         }
 
         [HttpGet("clients")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get(ClientModel query)
         {
-            var clients = await _ctx.Clients.ToListAsync();
+            var data = _ctx.Clients.Select(o => o);
+            var count = data.Count();
+            var results = await data.Skip((query.Page * query.PageSize)).Take(query.PageSize).ToListAsync();
 
-            return Ok(clients);
+            return Ok(new { count, results });
         }
 
         [HttpGet("clients/{id}")]

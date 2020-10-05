@@ -20,7 +20,7 @@ export const formConfig = [
     initialValue: "",
   },
   {
-    Header: "ClientId",
+    Header: "Client Id",
     accessor: "ClientId",
     type: "text",
     table: "ClientScopes",
