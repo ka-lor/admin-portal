@@ -4,20 +4,20 @@ import {
   yupSchema,
   initialValues,
   columnNames,
-} from "../../configs/tables/Clients";
-import AdminPages from "../../reusable/admin-pages/AdminPages";
+} from "../../../configs/tables/ApiResources";
+import AdminPages from "../../../reusable/admin-pages/AdminPages";
 
-function Clients() {
+function ApiResources() {
   return (
     <div>
       <AdminPages
         formConfig={formConfig}
         yupSchema={yupSchema}
         initialValues={initialValues}
-        apiEndpoint="api/v1/admin-portal/controllers/clients"
+        apiEndpoint="api/v1/admin-portal/controllers/api-resources"
       />
     </div>
   );
 }
 
-export default Clients;
+export default ApiResources;

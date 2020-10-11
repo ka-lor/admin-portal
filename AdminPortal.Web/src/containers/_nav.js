@@ -18,8 +18,36 @@ export default [
   },
   {
     _tag: "CSidebarNavItem",
+    name: "Clients",
+    to: "/api-m/clients",
+    icon: "cil-drop",
+  },
+  {
+    _tag: "CSidebarNavItem",
     name: "API Resources",
-    to: "/identity-server/clients",
+    to: "/api-m/api-resources",
+    icon: "cil-drop",
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Swagger",
+    to: "/swagger/identity-server",
+    icon: "cil-drop",
+  },
+  {
+    _tag: "CSidebarNavTitle",
+    _children: ["User Management"],
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Users",
+    to: "/swagger/identity-server",
+    icon: "cil-drop",
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Roles",
+    to: "/swagger/identity-server",
     icon: "cil-drop",
   },
   {
@@ -51,11 +79,5 @@ export default [
         icon: "cil-pencil",
       },
     ],
-  },
-  {
-    _tag: "CSidebarNavItem",
-    name: "Swagger",
-    to: "/swagger/identity-server",
-    icon: "cil-drop",
   },
 ];

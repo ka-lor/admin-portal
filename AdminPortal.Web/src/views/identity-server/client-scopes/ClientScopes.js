@@ -3,8 +3,8 @@ import {
   formConfig,
   yupSchema,
   initialValues,
-} from "../../configs/tables/ClientScopes";
-import AdminPages from "../../reusable/admin-pages/AdminPages";
+} from "../../../configs/tables/ClientScopes";
+import AdminPages from "../../../reusable/admin-pages/AdminPages";
 
 function ClientScopes() {
   return (
