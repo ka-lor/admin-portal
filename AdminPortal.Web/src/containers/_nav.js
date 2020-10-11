@@ -14,6 +14,16 @@ export default [
   },
   {
     _tag: "CSidebarNavTitle",
+    _children: ["API Management"],
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "API Resources",
+    to: "/identity-server/clients",
+    icon: "cil-drop",
+  },
+  {
+    _tag: "CSidebarNavTitle",
     _children: ["Identity Server"],
   },
   {

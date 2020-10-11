@@ -19,7 +19,8 @@ import {
   CCol,
 } from "@coreui/react";
 import AdminForm from "./AdminForm";
-import axios from "axios";
+import { CIcon } from "@coreui/icons-react";
+import { freeSet } from "@coreui/icons";
 import {
   useTable,
   useGroupBy,
@@ -56,7 +57,6 @@ function AdminDataTable({
     rows,
     prepareRow,
     allColumns,
-    getToggleHideAllColumnsProps,
     page,
     canPreviousPage,
     canNextPage,
@@ -71,7 +71,11 @@ function AdminDataTable({
     {
       columns,
       data,
-      initialState: { pageIndex: 0, pageSize: 20 }, // Pass our hoisted table state
+      initialState: {
+        pageIndex: 0,
+        pageSize: 10,
+        sortBy: [{ id: "Id", desc: false }],
+      }, // Pass our hoisted table state
       manualSortBy: true,
       manualPagination: true, // Tell the usePagination
       // hook that we'll handle our own data fetching
@@ -136,8 +140,11 @@ function AdminDataTable({
       </div>
       <br />
       <div className="table-responsive">
-        <table className="table table-striped table-hover" {...getTableProps()}>
-          <thead>
+        <table
+          className={`table table-striped table-hover${loading && " loading"}`}
+          {...getTableProps()}
+        >
+          <thead style={{ tableLayout: "fixed" }}>
             {headerGroups.map((headerGroup) => (
               <tr {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map((column) => (
@@ -149,8 +156,8 @@ function AdminDataTable({
                     <span>
                       {column.isSorted
                         ? column.isSortedDesc
-                          ? " 🔽"
-                          : " 🔼"
+                          ? " -- down"
+                          : " -- up"
                         : ""}
                     </span>
                   </th>
@@ -158,7 +165,7 @@ function AdminDataTable({
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps()}>
+          <tbody style={{ tableLayout: "fixed" }} {...getTableBodyProps()}>
             {rows.map((row, i) => {
               prepareRow(row);
               return (
@@ -183,43 +190,42 @@ function AdminDataTable({
           <CButton
             color="secondary"
             onClick={() => gotoPage(0)}
-            disabled={!canPreviousPage}
+            disabled={!canPreviousPage || loading}
           >
             {"<<"}
           </CButton>{" "}
           <CButton
             color="secondary"
             onClick={() => previousPage()}
-            disabled={!canPreviousPage}
+            disabled={!canPreviousPage || loading}
           >
             {"<"}
           </CButton>{" "}
           <CButton
             color="secondary"
             onClick={() => nextPage()}
-            disabled={!canNextPage}
+            disabled={!canNextPage || loading}
           >
             {">"}
           </CButton>{" "}
           <CButton
             color="secondary"
             onClick={() => gotoPage(pageCount - 1)}
-            disabled={!canNextPage}
+            disabled={!canNextPage || loading}
           >
             {">>"}
           </CButton>{" "}
         </div>
-        <div>
-          <CLabel>
-            Page{" "}
-            <strong>
-              {pageIndex + 1} of {pageOptions.length}
-            </strong>{" "}
-          </CLabel>
+        <div style={{ alignSelf: "flex-end" }}>
+          Page{" "}
+          <strong>
+            {pageIndex + 1} of {pageOptions.length}
+          </strong>{" "}
         </div>
         <div>
           <CSelect
             value={pageSize}
+            disabled={loading}
             onChange={(e) => {
               setPageSize(Number(e.target.value));
             }}

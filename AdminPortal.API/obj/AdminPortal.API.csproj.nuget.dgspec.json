@@ -87,6 +87,10 @@
             "Swashbuckle.AspNetCore.Filters": {
               "target": "Package",
               "version": "[6.0.0, )"
+            },
+            "System.Linq.Dynamic.Core": {
+              "target": "Package",
+              "version": "[1.2.2, )"
             }
           },
           "imports": [

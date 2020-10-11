@@ -22,15 +22,20 @@ function AdminPages(props) {
 
   const fetchData = async ({ pageSize, pageIndex, sortBy }) => {
     const fetchId = ++fetchIdRef.current;
+    let sortQuery = "";
 
-    console.log(sortBy);
+    if (sortBy.length > 0) {
+      sortQuery = `&orderBy=${sortBy[0].id}&desc=${sortBy[0].desc}`;
+    }
+
+    console.log(sortBy.length);
 
     setLoading(true);
 
     if (fetchId === fetchIdRef.current) {
       await axios
         .get(
-          `https://localhost:5001/${props.apiEndpoint}?pageSize=${pageSize}&page=${pageIndex}`
+          `https://localhost:5001/${props.apiEndpoint}?pageSize=${pageSize}&page=${pageIndex}${sortQuery}`
         )
         .then((res) => {
           setData(res.data.results);
