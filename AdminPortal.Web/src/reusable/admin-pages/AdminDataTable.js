@@ -48,6 +48,7 @@ function AdminDataTable({
   toggle,
   fetchData,
   loading,
+  setRowData,
   pageCount: controlledPageCount,
 }) {
   const {
@@ -169,7 +170,13 @@ function AdminDataTable({
             {rows.map((row, i) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps()}>
+                <tr
+                  {...row.getRowProps()}
+                  onClick={() => {
+                    setRowData(row.values);
+                    toggle("view");
+                  }}
+                >
                   {row.cells.map((cell) => {
                     return (
                       <td {...cell.getCellProps()}>{cell.render("Cell")}</td>

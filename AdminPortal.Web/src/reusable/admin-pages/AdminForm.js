@@ -55,8 +55,7 @@ function AdminForm(props) {
                     />
                   ))}
               </>
-            ) : (
-              props.display === "edit" && (
+            ) : props.display === "edit" && (
                 <>
                   {props.formConfig.map((input, i) => (
                     <InputFields
@@ -66,7 +65,10 @@ function AdminForm(props) {
                     />
                   ))}
                 </>
-              )
+              ) ? (
+              props.display === "view"
+            ) : (
+              <div>{props.children}</div>
             )}
           </CModalBody>
           <CModalFooter>

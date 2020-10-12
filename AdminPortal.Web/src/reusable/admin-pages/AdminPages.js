@@ -1,5 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
-import { CContainer, CCard, CCardBody, CCardHeader } from "@coreui/react";
+import {
+  CContainer,
+  CCard,
+  CCardBody,
+  CCardHeader,
+  CTabs,
+  CNav,
+  CNavItem,
+  CTabContent,
+  CTabPane,
+  CNavLink,
+} from "@coreui/react";
 import AdminForm from "./AdminForm";
 import axios from "axios";
 
@@ -47,30 +58,51 @@ function AdminPages(props) {
   };
 
   return (
-    <CContainer>
-      <CCard>
-        <CCardHeader>AdminPages</CCardHeader>
-        <CCardBody>
-          <AdminDataTable
-            toggle={toggle}
-            columns={columns}
-            data={data}
-            fetchData={fetchData}
-            loading={loading}
-            pageCount={pageCount}
-          />
-          <AdminForm
-            formConfig={props.formConfig}
-            initialValues={props.initialValues}
-            yupSchema={props.yupSchema}
-            rowData={rowData}
-            modal={modal}
-            toggle={() => toggle()}
-            display={display}
-          />
-        </CCardBody>
-      </CCard>
-    </CContainer>
+    // <CContainer>
+    <CCard>
+      <CCardHeader>AdminPages</CCardHeader>
+      <CCardBody>
+        <AdminDataTable
+          toggle={toggle}
+          columns={columns}
+          data={data}
+          setRowData={setRowData}
+          fetchData={fetchData}
+          loading={loading}
+          pageCount={pageCount}
+        />
+        <AdminForm
+          formConfig={props.formConfig}
+          initialValues={props.initialValues}
+          yupSchema={props.yupSchema}
+          rowData={rowData}
+          modal={modal}
+          toggle={() => toggle()}
+          display={display}
+        >
+          <h1>{rowData.Id}</h1>
+          <CTabs activeTab="home">
+            <CNav variant="tabs">
+              <CNavItem>
+                <CNavLink data-tab="home">Home</CNavLink>
+              </CNavItem>
+              <CNavItem>
+                <CNavLink data-tab="profile">Profile</CNavLink>
+              </CNavItem>
+              <CNavItem>
+                <CNavLink data-tab="messages">Messages</CNavLink>
+              </CNavItem>
+            </CNav>
+            <CTabContent>
+              <CTabPane data-tab="home">123</CTabPane>
+              <CTabPane data-tab="profile">456</CTabPane>
+              <CTabPane data-tab="messages">789</CTabPane>
+            </CTabContent>
+          </CTabs>
+        </AdminForm>
+      </CCardBody>
+    </CCard>
+    // </CContainer>
   );
 }
 

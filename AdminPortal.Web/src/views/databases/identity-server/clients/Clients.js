@@ -4,8 +4,8 @@ import {
   yupSchema,
   initialValues,
   columnNames,
-} from "../../../configs/tables/Clients";
-import AdminPages from "../../../reusable/admin-pages/AdminPages";
+} from "../../../../configs/tables/Clients";
+import AdminPages from "../../../../reusable/admin-pages/AdminPages";
 
 function Clients() {
   return (

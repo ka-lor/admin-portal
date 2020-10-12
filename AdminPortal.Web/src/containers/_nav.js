@@ -62,20 +62,44 @@ export default [
     _children: [
       {
         _tag: "CSidebarNavItem",
+        name: "API Resources",
+        to: "/databases/identity-server/api-resources",
+        icon: "cil-drop",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "API Scopes",
+        to: "/databases/identity-server/api-scopes",
+        icon: "cil-drop",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "API Resource Scopes",
+        to: "/databases/identity-server/api-resource-scopes",
+        icon: "cil-drop",
+      },
+      {
+        _tag: "CSidebarNavItem",
+        name: "API Resource Secrets",
+        to: "/databases/identity-server/api-resource-secrets",
+        icon: "cil-drop",
+      },
+      {
+        _tag: "CSidebarNavItem",
         name: "Clients",
-        to: "/identity-server/clients",
+        to: "/databases/identity-server/clients",
         icon: "cil-drop",
       },
       {
         _tag: "CSidebarNavItem",
         name: "Client Secrets",
-        to: "/identity-server/client-secrets",
+        to: "/databases/identity-server/client-secrets",
         icon: "cil-pencil",
       },
       {
         _tag: "CSidebarNavItem",
         name: "Client Scopes",
-        to: "/identity-server/client-scopes",
+        to: "/databases/identity-server/client-scopes",
         icon: "cil-pencil",
       },
     ],

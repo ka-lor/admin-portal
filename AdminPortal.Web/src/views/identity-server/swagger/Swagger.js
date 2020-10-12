@@ -5,14 +5,14 @@ import { CContainer, CCard, CCardHeader, CCardBody } from "@coreui/react";
 
 function Swagger() {
   return (
-    <CContainer>
-      <CCard>
-        <CCardHeader>Identity Server API Swagger</CCardHeader>
-        <CCardBody>
-          <SwaggerUI url="https://localhost:5001/swagger/v1/swagger.json" />
-        </CCardBody>
-      </CCard>
-    </CContainer>
+    // <CContainer>
+    <CCard>
+      <CCardHeader>Identity Server API Swagger</CCardHeader>
+      <CCardBody>
+        <SwaggerUI url="https://localhost:5001/swagger/v1/swagger.json" />
+      </CCardBody>
+    </CCard>
+    // </CContainer>
   );
 }
 

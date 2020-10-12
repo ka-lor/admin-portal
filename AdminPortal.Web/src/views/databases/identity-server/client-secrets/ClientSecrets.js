@@ -3,20 +3,20 @@ import {
   formConfig,
   yupSchema,
   initialValues,
-} from "../../../configs/tables/ClientScopes";
-import AdminPages from "../../../reusable/admin-pages/AdminPages";
+} from "../../../../configs/tables/ClientSecrets";
+import AdminPages from "../../../../reusable/admin-pages/AdminPages";
 
-function ClientScopes() {
+function ClientSecrets() {
   return (
     <div>
       <AdminPages
         formConfig={formConfig}
         yupSchema={yupSchema}
         initialValues={initialValues}
-        apiEndpoint="api/v1/admin-portal/controllers/client-scopes"
+        apiEndpoint="api/v1/admin-portal/controllers/client-secrets"
       />
     </div>
   );
 }
 
-export default ClientScopes;
+export default ClientSecrets;
